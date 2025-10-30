@@ -9,57 +9,87 @@ import Card from "./component/card";
 export default function Home() {
   return (
     <div>
-      {/* HEADER avec Vanta derrière */}
-      {/* Fond animé */}
-      <div className="absolute inset-0 -z-10 h-full w-full ">
-        <VantaBackground />
-      </div>
-
-      {/* Menu en haut à droite */}
-      <div className="flex justify-end gap-8 pr-24 py-6 text-[#F5F5F5]">
-        <p>contacter</p>
-        <p>projets</p>
-        <p>à propos</p>
-      </div>
-
-      {/* Bloc principal avec le nom et le bouton */}
-      <div className="flex items-center gap-12 pl-24 pt-40">
-        {/* Texte */}
-        <div>
-          <p className="text-[120px] font-bold text-[#F5F5F5] drop-shadow-lg">
-            Renouf
-          </p>
-          <p className="text-[120px] font-bold text-[#F5F5F5] drop-shadow-lg">
-            Léo
-          </p>
+      {/* HEADER avec Vanta */}
+      <div className="relative h-[100dvh]">
+        <div className="absolute inset-0 -z-10">
+          <VantaBackground />
         </div>
 
-        {/* Bouton */}
-        <div className="pl-90">
-          <Button></Button>
+        {/* Menu */}
+        <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 pr-6 md:pr-24 py-6 text-[#F5F5F5] text-sm md:text-base">
+          <p>contacter</p>
+          <p>projets</p>
+          <p>à propos</p>
+        </div>
+
+        {/* Bloc principal */}
+        <div className="relative flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 pl-6 md:pl-24 pt-20 md:pt-40">
+          <div className="text-center md:text-left">
+            <p className="text-5xl md:text-[120px] font-bold text-[#F5F5F5] drop-shadow-lg">
+              Renouf
+            </p>
+            <p className="text-5xl md:text-[120px] font-bold text-[#F5F5F5] drop-shadow-lg">
+              Léo
+            </p>
+          </div>
+
+          {/* Bouton responsive */}
+          <div
+            className="
+        mt-8                 
+        md:absolute         
+        md:left-[65%]       
+        md:top-[75%]         
+      "
+          >
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="button"
+            >
+              <Button />
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* SECTION ABOUT */}
-      <div className="bg-gray-200">
-        <div className="grid grid-cols-2 h-screen">
-          {/* Colonne gauche - Texte */}
-          <div className="flex flex-col justify-center p-12">
-            <h2 className="text-3xl font-bold mb-6">À propos de moi</h2>
-            <p className="leading-[35px] text-[16px]">
+      {/* SECTION À PROPOS */}
+      <div className="relative bg-gray-200 h-auto md:h-screen">
+        <div className="absolute inset-0 block md:hidden">
+          <img
+            src="me.jpg"
+            alt="Léo Renouf"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full relative z-10">
+          <div className="flex flex-col justify-center p-6 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+              À propos de moi
+            </h2>
+            <p className="leading-7 md:leading-[35px] text-sm md:text-[16px]">
               Actuellement étudiant en 2ᵉ année de Bachelor of Engineering à
               Supinfo, je suis à la recherche d’une alternance pour mes 3
               prochaines années dans le domaine du développement web et des
               technologies numériques. Mon parcours se poursuivra naturellement
-              vers un Master, afin de renforcer mes compétences technique. Je
+              vers un Master, afin de renforcer mes compétences techniques. Je
               souhaite m’investir sur le long terme afin de développer mes
               compétences, apporter de la valeur à l’entreprise et contribuer à
               des projets ambitieux et innovants.
             </p>
           </div>
 
-          {/* Colonne droite - Image */}
-          <div className="w-full h-screen">
+          <div className="absolute inset-0 md:hidden">
+            <img
+              src="me.jpg"
+              alt="Léo Renouf"
+              className="w-full h-full object-cover opacity-40"
+            />
+          </div>
+
+          <div className="hidden md:block w-full h-screen">
             <img
               src="me.jpg"
               alt="Léo Renouf"
@@ -69,10 +99,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SECTION LANGUAGES – Infinite Scroll */}
-      <section className="bg-white py-10">
+      {/* SECTION SKILLS */}
+      <section className="bg-white py-6 md:py-10">
         <div className="overflow-hidden whitespace-nowrap relative">
-          <div className="animate-scroll flex gap-8">
+          <div className="animate-scroll flex gap-4 md:gap-8">
             {[
               "TypeScript",
               "JavaScript",
@@ -86,12 +116,11 @@ export default function Home() {
             ].map((item, i) => (
               <span
                 key={i}
-                className="inline-block px-6 py-3 rounded-full bg-gray-100 border text-sm font-medium shadow-sm"
+                className="inline-block px-4 md:px-6 py-2 md:py-3 rounded-full bg-gray-100 border text-xs md:text-sm font-medium shadow-sm"
               >
                 {item}
               </span>
             ))}
-            {/* duplication */}
             {[
               "TypeScript",
               "JavaScript",
@@ -105,7 +134,7 @@ export default function Home() {
             ].map((item, i) => (
               <span
                 key={`dup-${i}`}
-                className="inline-block px-6 py-3 rounded-full bg-gray-100 border text-sm font-medium shadow-sm"
+                className="inline-block px-4 md:px-6 py-2 md:py-3 rounded-full bg-gray-100 border text-xs md:text-sm font-medium shadow-sm"
               >
                 {item}
               </span>
@@ -132,11 +161,13 @@ export default function Home() {
 
       {/* SECTION PROJETS */}
       <section className="py-12 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-8">Mes Projets</h2>
-        <div className="flex justify-center gap-8">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+          Mes Projets
+        </h2>
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-8">
           <Card
             title="Joséphine"
-            description="site sur-mesure, système de reservation, "
+            description="site sur-mesure, système de réservation"
             rotation={-15}
             image="josephine.png"
             link="projet/josephine"
@@ -159,19 +190,18 @@ export default function Home() {
       </section>
 
       {/* SECTION PARCOURS */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Mon Parcours</h2>
-
-          <div className="relative border-l-4 border-gray-300">
-            {/* Expériences */}
-            <div className="mb-10 ml-6">
-              <div className="absolute w-6 h-6 bg-black rounded-full -left-3 top-1"></div>
-              <h3 className="text-xl font-semibold">Freelance</h3>
+      <section className="bg-gray-100 py-16 px-4 md:px-0">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+            Mon Parcours
+          </h2>
+          <div className="relative border-l-4 border-gray-300 pl-6">
+            <div className="mb-10">
+              <h3 className="text-lg md:text-xl font-semibold">Freelance</h3>
               <span className="block text-sm text-gray-500 mb-2">
                 2025 – en cours
               </span>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 En tant que freelance dans le développement web, j’ai conçu et
                 réalisé plusieurs sites vitrines et applications, dont le site
                 du restaurant Joséphine et le lancement du projet Twodevly.
@@ -183,27 +213,23 @@ export default function Home() {
                 autonomie.
               </p>
             </div>
-
-            <div className="mb-10 ml-6">
-              <div className="absolute w-6 h-6 bg-black rounded-full -left-3 top-1"></div>
-              <h3 className="text-xl font-semibold">
+            <div className="mb-10">
+              <h3 className="text-lg md:text-xl font-semibold">
                 Bachelor of Engineering - Supinfo
               </h3>
               <span className="block text-sm text-gray-500 mb-2">
                 2024 - en cours
               </span>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Bachelor of Engineering à Supinfo Caen
               </p>
             </div>
-
-            <div className="mb-10 ml-6">
-              <div className="absolute w-6 h-6 bg-black rounded-full -left-3 top-1"></div>
-              <h3 className="text-xl font-semibold">CDI - McDo</h3>
+            <div className="mb-10">
+              <h3 className="text-lg md:text-xl font-semibold">CDI - McDo</h3>
               <span className="block text-sm text-gray-500 mb-2">
                 2024 - en cours
               </span>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Depuis un an, mon expérience au sein de McDonald’s m’a permis de
                 développer des compétences essentielles telles que le travail en
                 équipe, la gestion du temps, la rigueur et la résistance au
@@ -214,16 +240,14 @@ export default function Home() {
                 projets personnels et professionnels.
               </p>
             </div>
-
-            <div className="mb-10 ml-6">
-              <div className="absolute w-6 h-6 bg-black rounded-full -left-3 top-1"></div>
-              <h3 className="text-xl font-semibold">
-                CDD - Préparateur de commandes Hopital pasteur
+            <div className="mb-10">
+              <h3 className="text-lg md:text-xl font-semibold">
+                CDD - Préparateur de commandes Hopital Pasteur
               </h3>
               <span className="block text-sm text-gray-500 mb-2">
-                été 2024 /2025
+                été 2024 / 2025
               </span>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 En tant que préparateur de commandes à l’Hôpital Pasteur, j’ai
                 acquis de solides compétences en organisation, rigueur et
                 respect des procédures. Ce poste m’a appris à travailler avec
@@ -232,62 +256,24 @@ export default function Home() {
                 renforcé ma capacité à travailler en équipe.
               </p>
             </div>
-
-            <div className="mb-10 ml-6">
-              <div className="absolute w-6 h-6 bg-black rounded-full -left-3 top-1"></div>
-              <h3 className="text-xl font-semibold">
+            <div className="mb-10">
+              <h3 className="text-lg md:text-xl font-semibold">
                 Baccalauréat STMG - Lycée Alexis de Tocqueville
               </h3>
               <span className="block text-sm text-gray-500 mb-2">
                 2022 - 2024
               </span>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Baccalauréat STMG, spécialisation Gestion finance
               </p>
             </div>
           </div>
         </div>
       </section>
-      {/* SECTION CONTACT */}
-      <section id="contact" className="bg-gray-100 py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Me Contacter</h2>
-          <p className="text-gray-700 mb-8">
-            Vous souhaitez discuter d’un projet, d’une collaboration ou
-            simplement échanger ? N’hésitez pas à m’envoyer un message !
-          </p>
 
-          {/* Formulaire */}
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Votre nom"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-              />
-              <input
-                type="email"
-                placeholder="Votre email"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
-            <textarea
-              rows={5}
-              placeholder="Votre message"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full md:w-auto px-6 py-3 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition"
-            >
-              Envoyer
-            </button>
-          </form>
-        </div>
-      </section>
-      <footer className="bg-[#1E3A61] text-[#F5F5F5] py-10">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Colonne 2 : Navigation */}
+      {/* FOOTER */}
+      <footer className="relative bg-[#1E3A61] text-[#F5F5F5] py-10 px-6 z-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-gray-300">
@@ -309,10 +295,9 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Colonne 3 : Réseaux */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Me retrouver</h4>
-            <div className="flex gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <a
                 href="https://github.com/leolsvg"
                 target="_blank"
@@ -336,7 +321,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bas du footer */}
         <div className="border-t border-gray-600 mt-10 pt-6 text-center text-gray-400 text-sm">
           © {new Date().getFullYear()} Renouf Léo. Tous droits réservés.
         </div>

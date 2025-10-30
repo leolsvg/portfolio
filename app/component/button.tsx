@@ -6,7 +6,7 @@ const Button = () => {
       <button className="button">
         <span className="button_lg">
           <span className="button_sl" />
-          <span className="button_text">Download Now</span>
+          <span className="button_text">Télécharger mon cv</span>
         </span>
       </button>
     </StyledWrapper>
