@@ -10,16 +10,22 @@ export default function Home() {
   return (
     <div>
       {/* HEADER avec Vanta */}
-      <div className="relative h-[100dvh]">
+      <div className="relative h-[100dvh]" id="home">
         <div className="absolute inset-0 -z-10">
           <VantaBackground />
         </div>
 
         {/* Menu */}
         <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 pr-6 md:pr-24 py-6 text-[#F5F5F5] text-sm md:text-base">
-          <p>contacter</p>
-          <p>projets</p>
-          <p>à propos</p>
+          <a href="#contact" className="hover:underline">
+            contacter
+          </a>
+          <a href="#projects" className="hover:underline">
+            projets
+          </a>
+          <a href="#about" className="hover:underline">
+            à propos
+          </a>
         </div>
 
         {/* Bloc principal */}
@@ -33,15 +39,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Bouton responsive */}
-          <div
-            className="
-        mt-8                 
-        md:absolute         
-        md:left-[65%]       
-        md:top-[75%]         
-      "
-          >
+          <div className="mt-8 md:absolute md:left-[65%] md:top-[75%]">
             <a
               href="/cv.pdf"
               target="_blank"
@@ -55,7 +53,7 @@ export default function Home() {
       </div>
 
       {/* SECTION À PROPOS */}
-      <div className="relative bg-gray-200 h-auto md:h-screen">
+      <div className="relative bg-gray-200 h-auto md:h-screen" id="about">
         <div className="absolute inset-0 block md:hidden">
           <img
             src="me.jpg"
@@ -79,14 +77,6 @@ export default function Home() {
               compétences, apporter de la valeur à l’entreprise et contribuer à
               des projets ambitieux et innovants.
             </p>
-          </div>
-
-          <div className="absolute inset-0 md:hidden">
-            <img
-              src="me.jpg"
-              alt="Léo Renouf"
-              className="w-full h-full object-cover opacity-40"
-            />
           </div>
 
           <div className="hidden md:block w-full h-screen">
@@ -160,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* SECTION PROJETS */}
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100" id="projects">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
           Mes Projets
         </h2>
@@ -189,90 +179,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION PARCOURS */}
-      <section className="bg-gray-100 py-16 px-4 md:px-0">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            Mon Parcours
-          </h2>
-          <div className="relative border-l-4 border-gray-300 pl-6">
-            <div className="mb-10">
-              <h3 className="text-lg md:text-xl font-semibold">Freelance</h3>
-              <span className="block text-sm text-gray-500 mb-2">
-                2025 – en cours
-              </span>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                En tant que freelance dans le développement web, j’ai conçu et
-                réalisé plusieurs sites vitrines et applications, dont le site
-                du restaurant Joséphine et le lancement du projet Twodevly.
-                Cette expérience m’a permis de renforcer mes compétences
-                techniques (Next.js, Tailwind, bases de données, SEO), mais
-                aussi d’apprendre à gérer un projet de bout en bout :
-                compréhension des besoins clients, gestion des délais,
-                communication et suivi. Elle m’a également donné une solide
-                autonomie.
-              </p>
-            </div>
-            <div className="mb-10">
-              <h3 className="text-lg md:text-xl font-semibold">
-                Bachelor of Engineering - Supinfo
-              </h3>
-              <span className="block text-sm text-gray-500 mb-2">
-                2024 - en cours
-              </span>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                Bachelor of Engineering à Supinfo Caen
-              </p>
-            </div>
-            <div className="mb-10">
-              <h3 className="text-lg md:text-xl font-semibold">CDI - McDo</h3>
-              <span className="block text-sm text-gray-500 mb-2">
-                2024 - en cours
-              </span>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                Depuis un an, mon expérience au sein de McDonald’s m’a permis de
-                développer des compétences essentielles telles que le travail en
-                équipe, la gestion du temps, la rigueur et la résistance au
-                stress. J’ai appris à être réactif dans un environnement
-                dynamique, à assurer un service de qualité et à maintenir une
-                bonne communication avec mes collègues comme avec les clients.
-                Ces compétences transversales me servent aujourd’hui dans mes
-                projets personnels et professionnels.
-              </p>
-            </div>
-            <div className="mb-10">
-              <h3 className="text-lg md:text-xl font-semibold">
-                CDD - Préparateur de commandes Hopital Pasteur
-              </h3>
-              <span className="block text-sm text-gray-500 mb-2">
-                été 2024 / 2025
-              </span>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                En tant que préparateur de commandes à l’Hôpital Pasteur, j’ai
-                acquis de solides compétences en organisation, rigueur et
-                respect des procédures. Ce poste m’a appris à travailler avec
-                précision dans un environnement exigeant, à gérer les priorités
-                et à assurer la fiabilité des préparations. J’ai également
-                renforcé ma capacité à travailler en équipe.
-              </p>
-            </div>
-            <div className="mb-10">
-              <h3 className="text-lg md:text-xl font-semibold">
-                Baccalauréat STMG - Lycée Alexis de Tocqueville
-              </h3>
-              <span className="block text-sm text-gray-500 mb-2">
-                2022 - 2024
-              </span>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                Baccalauréat STMG, spécialisation Gestion finance
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="relative bg-[#1E3A61] text-[#F5F5F5] py-10 px-6 z-10">
+      {/* SECTION CONTACT (pied de page) */}
+      <footer
+        className="relative bg-[#1E3A61] text-[#F5F5F5] py-10 px-6 z-10"
+        id="contact"
+      >
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
