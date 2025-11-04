@@ -71,7 +71,7 @@ const StyledWrapper = styled.div`
     bottom: 0;
     width: 100%;
     padding: 16px;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(22, 43, 71, 0.7);
     color: #fff;
     z-index: 1;
     transition: transform 0.3s ease;
