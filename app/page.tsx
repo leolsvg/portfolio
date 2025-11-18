@@ -1,5 +1,6 @@
 "use client";
 
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import "swiper/css";
@@ -115,17 +116,21 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.3 }}
           />
 
-          {["parcours", "projets", "à propos"].map((item, i) => (
+          {[
+            { label: "à propos", id: "apropos" },
+            { label: "projets", id: "projets" },
+            { label: "parcours", id: "parcours" },
+          ].map((item, i) => (
             <motion.a
-              key={item}
-              href={`#${item.replace(/\s+/g, "")}`}
+              key={item.id}
+              href={`#${item.id}`}
               className="hover:text-[#C07B60] transition relative group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -2 }}
             >
-              {item}
+              {item.label}
               <motion.span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#C07B60] group-hover:w-full transition-all duration-300" />
             </motion.a>
           ))}
@@ -227,14 +232,6 @@ export default function Home() {
                   transition={{ duration: 0.5 }}
                 />
                 Télécharger mon CV <i className="fa-solid fa-download"></i>
-              </motion.a>
-              <motion.a
-                href="#contact"
-                className="border-2 border-[#C07B60] text-[#C07B60] px-6 py-3 rounded-md font-semibold hover:bg-[#C07B60]/10 transition relative"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Me contacter
               </motion.a>
             </motion.div>
 
@@ -657,7 +654,7 @@ export default function Home() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-gray-700">
-              {["À propos", "Projets", "Parcours", "Contact"].map((item, i) => (
+              {["À propos", "Projets", "Parcours"].map((item, i) => (
                 <motion.li
                   key={i}
                   whileHover={{ x: 5 }}
@@ -720,10 +717,7 @@ export default function Home() {
             className="mt-4 md:mt-0 flex items-center gap-2"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
-          >
-            Fait avec <span className="text-[#C07B60] text-lg">❤️</span> et
-            React
-          </motion.p>
+          ></motion.p>
         </div>
       </footer>
     </div>
