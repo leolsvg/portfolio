@@ -3,3 +3,30 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter');
+  font-display: swap;
+}
+
+/* Optimize Framer Motion animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Critical rendering path optimizations */
+body {
+  font-display: swap;
+}
+
+/* Preload images in critical above-fold section */
+img[priority] {
+  content-visibility: auto;
+}

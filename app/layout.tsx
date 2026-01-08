@@ -1,10 +1,23 @@
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  variable: "--font-inter",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  colorScheme: "light",
+  themeColor: "#C07B60",
+};
 
 export const metadata: Metadata = {
   title: "Léo Renouf - Développeur Freelance Caen | Web & Applications",
@@ -64,7 +77,14 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "verification_token", // À remplacer par le vrai token Google Search Console
+    google: "verification_token",
+  },
+  // Performance hints
+  manifest: "/manifest.json",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 
@@ -131,16 +151,39 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <link
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/webfonts/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/webfonts/fa-brands-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         {children}
 
-        {/* Import Three.js et Vanta via CDN */}
+        {/* FontAwesome CSS with deferred loading */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.1.0/css/all.min.css"
+          integrity="sha512-dBVJIzjqdarzcErjActive5oHUE4projokon87g00OoUAu+LInQ1/z7zaZ42qnqVVAIkKJVrgZH+63MnztyxItzR4gFWQC64"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+
+        {/* Import Three.js et Vanta via CDN - deferred */}
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
         <Script
           src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>
