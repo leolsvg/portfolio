@@ -120,10 +120,11 @@ export default function Home() {
             { label: "à propos", id: "apropos" },
             { label: "projets", id: "projets" },
             { label: "parcours", id: "parcours" },
+            { label: "blog", id: "/blog", isExternal: true },
           ].map((item, i) => (
             <motion.a
               key={item.id}
-              href={`#${item.id}`}
+              href={item.isExternal ? item.id : `#${item.id}`}
               className="hover:text-[#C07B60] transition relative group"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -196,7 +197,8 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Etudiant en Bachelor of Engineering à Supinfo Caen.
+              Développeur Freelance Caen - Etudiant en Bachelor of Engineering à
+              Supinfo.
             </motion.h2>
 
             <motion.p
@@ -205,9 +207,12 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              En quête d’une alternance pour septembre 2026, je suis motivé à
-              découvrir de nouveaux environnements, apprendre chaque jour et
-              participer activement à la réussite d’une équipe.
+              {" "}
+              Développeur web freelance basé à Caen, je crée des sites
+              sur-mesure et des applications modernes avec Next.js, React et
+              TypeScript. En quête d’une alternance pour septembre 2026, je suis
+              motivé à découvrir de nouveaux environnements, apprendre chaque
+              jour et participer activement à la réussite d’une équipe.
             </motion.p>
 
             <motion.div
@@ -316,7 +321,7 @@ export default function Home() {
             >
               <img
                 src="me.jpg"
-                alt="Léo Renouf"
+                alt="Léo Renouf - Développeur freelance Caen spécialisé en développement web"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -382,6 +387,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            En tant que développeur freelance à Caen, je me spécialise dans la
+            création de sites web modernes et d&apos;applications performantes.
             Actuellement étudiant en 2ᵉ année de Bachelor of Engineering à
             Supinfo, je suis à la recherche d&apos;une alternance pour mes 3
             prochaines années dans le domaine du développement web et des
@@ -496,7 +503,7 @@ export default function Home() {
             description="site sur-mesure, système de réservation"
             rotation={-15}
             image="josephine.png"
-            link="projet/josephine"
+            link="https://www.josephine-cherbourg.fr"
           />
           <Card
             title="Twodevly"
@@ -510,7 +517,7 @@ export default function Home() {
             description="site vitrine, projet de cours"
             rotation={25}
             image="/images/cinelabs.png"
-            link="https://github.com/leo/cinelabs"
+            link="https://cine-labs-eth5.vercel.app/"
           />
         </div>
       </section>
@@ -654,14 +661,14 @@ export default function Home() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-gray-700">
-              {["À propos", "Projets", "Parcours"].map((item, i) => (
+              {["À propos", "Projets", "Parcours", "Blog"].map((item, i) => (
                 <motion.li
                   key={i}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <a
-                    href="#"
+                    href={item === "Blog" ? "/blog" : "#"}
                     className="hover:text-[#C07B60] transition relative group"
                   >
                     {item}
