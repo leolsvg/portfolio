@@ -19,10 +19,10 @@ export function PreloadCriticalResources() {
         type="font/woff2"
         crossOrigin="anonymous"
       />
-      
+
       {/* Preload critical images */}
       <link rel="preload" as="image" href="/me.jpg" type="image/jpeg" />
-      
+
       {/* DNS prefetch for external resources */}
       <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
       <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />

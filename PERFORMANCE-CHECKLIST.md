@@ -46,13 +46,13 @@
 
 ## 📊 Estimated Scores
 
-| Category | Score |
-|----------|-------|
-| Performance | 100 |
-| Accessibility | 95+ |
-| Best Practices | 100 |
-| SEO | 100 |
-| **Overall** | **100** |
+| Category       | Score   |
+| -------------- | ------- |
+| Performance    | 100     |
+| Accessibility  | 95+     |
+| Best Practices | 100     |
+| SEO            | 100     |
+| **Overall**    | **100** |
 
 ---
 

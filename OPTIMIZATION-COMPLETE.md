@@ -119,15 +119,15 @@ Tous les problèmes de performance identifiés dans les insights PageSpeed ont �
 
 ## 📈 Statistiques d'Optimisation
 
-| Métrique | Avant | Après | Gain |
-|----------|-------|-------|------|
-| Performance Score | ? | **100** | ✅ |
-| LCP | ~3-4s | <2.5s | 40-50% ⬇️ |
-| FID | ~200-300ms | <100ms | 50%+ ⬇️ |
-| CLS | >0.2 | <0.1 | 50%+ ⬇️ |
-| JS Bundle | +19Kio | Optimisé | 15-20% ⬇️ |
-| Images | 1594 Kio | 600-800 Kio | 60%+ ⬇️ |
-| Render bloqué | 1970ms | <500ms | 75%+ ⬇️ |
+| Métrique          | Avant      | Après       | Gain     |
+| ----------------- | ---------- | ----------- | -------- |
+| Performance Score | ?          | **100**     | ✅        |
+| LCP               | ~3-4s      | <2.5s       | 40-50% ⬇️ |
+| FID               | ~200-300ms | <100ms      | 50%+ ⬇️   |
+| CLS               | >0.2       | <0.1        | 50%+ ⬇️   |
+| JS Bundle         | +19Kio     | Optimisé    | 15-20% ⬇️ |
+| Images            | 1594 Kio   | 600-800 Kio | 60%+ ⬇️   |
+| Render bloqué     | 1970ms     | <500ms      | 75%+ ⬇️   |
 
 ---
 

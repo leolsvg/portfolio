@@ -1,7 +1,11 @@
 // app/lib/image-loader.ts
 // Optimized image loader configuration for Next.js
 
-export const imageLoader = ({ src, width, quality }: {
+export const imageLoader = ({
+  src,
+  width,
+  quality,
+}: {
   src: string;
   width: number;
   quality?: number;
@@ -28,8 +32,8 @@ export const imageDimensions = {
 
 // Responsive image sizes configuration
 export const responsiveImageSizes = {
-  default: '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  profile: '(max-width: 768px) 256px, 450px',
-  projectCard: '(max-width: 768px) 288px, 288px',
-  full: '100vw',
+  default: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  profile: "(max-width: 768px) 256px, 450px",
+  projectCard: "(max-width: 768px) 288px, 288px",
+  full: "100vw",
 };

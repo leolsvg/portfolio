@@ -137,11 +137,11 @@ Comprehensive performance optimizations applied to achieve 100/100 Lighthouse sc
 
 ### 10. **Core Web Vitals Targets** ✅
 
-| Metric | Target | Status |
-|--------|--------|--------|
-| **LCP** (Largest Contentful Paint) | < 2.5s | ✅ Optimized |
-| **FID** (First Input Delay) | < 100ms | ✅ Optimized |
-| **CLS** (Cumulative Layout Shift) | < 0.1 | ✅ Optimized |
+| Metric                             | Target  | Status      |
+| ---------------------------------- | ------- | ----------- |
+| **LCP** (Largest Contentful Paint) | < 2.5s  | ✅ Optimized |
+| **FID** (First Input Delay)        | < 100ms | ✅ Optimized |
+| **CLS** (Cumulative Layout Shift)  | < 0.1   | ✅ Optimized |
 
 **LCP Optimization:**
 - Preload critical image (me.jpg)

@@ -167,15 +167,15 @@ images: {
 
 ## 📊 Résumé des Améliorations
 
-| Métrique | Avant | Après | Amélioration |
-|----------|-------|-------|--------------|
-| **Performance Score** | ? | 100/100 | ✅ Maximal |
-| **LCP** | > 3s | < 2.5s | ⬇️ 30-40% |
-| **FID** | > 200ms | < 100ms | ⬇️ 50%+ |
-| **CLS** | > 0.2 | < 0.1 | ⬇️ 50%+ |
-| **Taille Bundle JS** | + 19Kio excès | Optimisé | ⬇️ 15-20% |
-| **Taille Images** | 1594 Kio | 400-600 Kio | ⬇️ 60%+ |
-| **Temps Render** | 1970ms bloqué | < 500ms | ⬇️ 75%+ |
+| Métrique              | Avant         | Après       | Amélioration |
+| --------------------- | ------------- | ----------- | ------------ |
+| **Performance Score** | ?             | 100/100     | ✅ Maximal    |
+| **LCP**               | > 3s          | < 2.5s      | ⬇️ 30-40%     |
+| **FID**               | > 200ms       | < 100ms     | ⬇️ 50%+       |
+| **CLS**               | > 0.2         | < 0.1       | ⬇️ 50%+       |
+| **Taille Bundle JS**  | + 19Kio excès | Optimisé    | ⬇️ 15-20%     |
+| **Taille Images**     | 1594 Kio      | 400-600 Kio | ⬇️ 60%+       |
+| **Temps Render**      | 1970ms bloqué | < 500ms     | ⬇️ 75%+       |
 
 ---
 

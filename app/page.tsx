@@ -47,7 +47,7 @@ function Card({ title, description, rotation, image, link }: CardProps) {
             className="w-full h-full"
           >
             <Image
-              src={image.startsWith('/') ? image : `/${image}`}
+              src={image.startsWith("/") ? image : `/${image}`}
               alt={title}
               fill
               className="object-cover"

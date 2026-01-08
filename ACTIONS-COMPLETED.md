@@ -116,28 +116,28 @@
 ## 📊 Métriques & Améliorations
 
 ### Performance Scores
-| Catégorie | Avant | Après | Amélioration |
-|-----------|-------|-------|--------------|
-| Performance | ? | **100** | ✅ |
-| LCP | ~3-4s | <2.5s | ⬇️ 40-50% |
-| FID | ~200ms | <100ms | ⬇️ 50%+ |
-| CLS | >0.2 | <0.1 | ⬇️ 50%+ |
+| Catégorie   | Avant  | Après   | Amélioration |
+| ----------- | ------ | ------- | ------------ |
+| Performance | ?      | **100** | ✅            |
+| LCP         | ~3-4s  | <2.5s   | ⬇️ 40-50%     |
+| FID         | ~200ms | <100ms  | ⬇️ 50%+       |
+| CLS         | >0.2   | <0.1    | ⬇️ 50%+       |
 
 ### Bundle Sizes
-| Type | Avant | Après | Économie |
-|------|-------|-------|----------|
-| Images | 1594 KB | 600 KB | -62% |
-| JavaScript | ~180 KB | ~150 KB | -20% |
-| CSS | ~45 KB | ~35 KB | -22% |
-| Total | ~1800 KB | ~900 KB | -50% |
+| Type       | Avant    | Après   | Économie |
+| ---------- | -------- | ------- | -------- |
+| Images     | 1594 KB  | 600 KB  | -62%     |
+| JavaScript | ~180 KB  | ~150 KB | -20%     |
+| CSS        | ~45 KB   | ~35 KB  | -22%     |
+| Total      | ~1800 KB | ~900 KB | -50%     |
 
 ### Render Performance
-| Métrique | Avant | Après | Amélioration |
-|----------|-------|-------|--------------|
-| Render-blocking | 1970ms | <500ms | -75% |
-| Font loading | 190ms | Immédiat | -100% |
-| LCP | ~3.5s | ~1.8s | -50% |
-| TTI | ~4.2s | ~2.1s | -50% |
+| Métrique        | Avant  | Après    | Amélioration |
+| --------------- | ------ | -------- | ------------ |
+| Render-blocking | 1970ms | <500ms   | -75%         |
+| Font loading    | 190ms  | Immédiat | -100%        |
+| LCP             | ~3.5s  | ~1.8s    | -50%         |
+| TTI             | ~4.2s  | ~2.1s    | -50%         |
 
 ---
 
@@ -225,10 +225,10 @@
 ## 🎯 Core Web Vitals Status
 
 | Metric | Target | Achieved | Status |
-|--------|--------|----------|--------|
-| LCP | <2.5s | <2.5s | ✅ PASS |
-| FID | <100ms | <100ms | ✅ PASS |
-| CLS | <0.1 | <0.1 | ✅ PASS |
+| ------ | ------ | -------- | ------ |
+| LCP    | <2.5s  | <2.5s    | ✅ PASS |
+| FID    | <100ms | <100ms   | ✅ PASS |
+| CLS    | <0.1   | <0.1     | ✅ PASS |
 
 ---
 
