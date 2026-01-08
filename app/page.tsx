@@ -1,7 +1,7 @@
 "use client";
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -41,13 +41,20 @@ function Card({ title, description, rotation, image, link }: CardProps) {
         }}
       >
         <div className="relative w-full h-full">
-          <motion.img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
+          <motion.div
             animate={{ scale: isHovered ? 1.1 : 1 }}
             transition={{ duration: 0.4 }}
-          />
+            className="w-full h-full"
+          >
+            <Image
+              src={image.startsWith("/") ? image : `/${image}`}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={false}
+            />
+          </motion.div>
           <motion.div
             className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-6"
             initial={{ opacity: 0.8 }}
@@ -319,10 +326,13 @@ export default function Home() {
               className="relative w-64 h-64 md:w-[450px] md:h-[450px] rounded-full overflow-hidden shadow-[0_0_50px_-10px_rgba(192,123,96,0.4)] z-10"
               transition={{ duration: 0.4 }}
             >
-              <img
-                src="me.jpg"
+              <Image
+                src="/me.jpg"
                 alt="Léo Renouf - Développeur freelance Caen spécialisé en développement web"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 256px, 450px"
               />
             </motion.div>
             <motion.div
