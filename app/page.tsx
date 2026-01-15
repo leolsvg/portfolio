@@ -383,18 +383,18 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Actuellement étudiant en 2ᵉ année de Bachelor of Engineering à
-            Supinfo, je suis à la recherche d&apos;une alternance pour mes 3
-            prochaines années dans le domaine du développement web et des
-            technologies numériques. Mon parcours se poursuivra naturellement
-            vers un Master, afin de renforcer mes compétences techniques. Je
-            souhaite m&apos;investir sur le long terme afin de développer mes
-            compétences, apporter de la valeur à l&apos;entreprise et contribuer
-            à des projets ambitieux et innovants.
+            Actuellement en 2ᵉ année de Bachelor of Engineering à Supinfo, je
+            suis à la recherche d&apos;une alternance de 3 ans à partir de la
+            rentrée 2026. Passionné par l&apos;architecture logicielle, je
+            construis mon profil autour d&apos;un socle solide en Back-End (Java
+            / Spring Boot) tout en maîtrisant les enjeux du Web moderne (Next.js
+            / React) et de la sécurité applicative. Je souhaite m&apos;investir
+            durablement au sein d&apos;une équipe technique pour monter en
+            compétences jusqu&apos;à l&apos;obtention de mon Master, tout en
+            apportant une vraie valeur ajoutée opérationnelle.
           </motion.p>
         </div>
       </section>
-
       {/* SECTION SKILLS */}
       <section className="bg-[#F7F4F2] py-6 md:py-10 border-y border-[#E8E3DF] relative overflow-hidden">
         {/* Grille wireframe en fond */}
@@ -432,7 +432,7 @@ export default function Home() {
                 "Java",
                 "Spring Boot",
                 "SQL",
-                "Github"
+                "Github",
                 "Tailwind CSS",
                 "React",
                 "Next.js",
