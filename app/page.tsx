@@ -312,6 +312,7 @@ export default function Home() {
 
             <motion.div
               className="relative w-64 h-64 md:w-[450px] md:h-[450px] rounded-full overflow-hidden shadow-[0_0_50px_-10px_rgba(192,123,96,0.4)] z-10"
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.4 }}
             >
               <img
@@ -416,20 +417,22 @@ export default function Home() {
         <div className="overflow-hidden whitespace-nowrap relative">
           <motion.div
             className="flex gap-4 md:gap-8"
-            animate={{ x: [0, -1000] }}
+            animate={{ x: [0, "-50%"] }}
             transition={{
               duration: 20,
               repeat: Infinity,
               ease: "linear",
             }}
           >
-            {[...Array(2)].map((_, setIndex) =>
+            {[...Array(4)].map((_, setIndex) =>
               [
                 "TypeScript",
                 "JavaScript",
                 "Python",
-                "HTML",
-                "CSS",
+                "Java",
+                "Spring Boot",
+                "SQL",
+                "Github",
                 "Tailwind CSS",
                 "React",
                 "Next.js",
@@ -504,13 +507,6 @@ export default function Home() {
             rotation={5}
             image="twodevly.png"
             link="https://twodevly.com"
-          />
-          <Card
-            title="Cinélabs"
-            description="site vitrine, projet de cours"
-            rotation={25}
-            image="/images/cinelabs.png"
-            link="https://github.com/leo/cinelabs"
           />
         </div>
       </section>
