@@ -1,0 +1,130 @@
+:root {
+  --ink: #20211e;
+  --paper: #eeece6;
+  --warm: #d7d3c8;
+  --lime: #d9c7a4;
+  --rust: #c84f35;
+  --muted: #85847c;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Manrope", Arial, sans-serif;
+  --mono: "DM Mono", monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+.section-pad { padding: 8rem 8vw; }
+.site-header { position: absolute; z-index: 5; width: 100%; padding: 2rem 4vw; display: flex; justify-content: space-between; align-items: center; }
+.brand { display: flex; gap: .8rem; align-items: center; font-size: .73rem; letter-spacing: .02em; font-weight: 700; }
+.brand-mark { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; letter-spacing: -.18em; }
+.brand-mark span { font-family: var(--sans); color: var(--rust); font-size: .9em; margin-left: .12em; }
+.main-nav { display: flex; gap: 2.7rem; align-items: center; font-size: .73rem; }
+.main-nav a { transition: opacity .25s; }
+.main-nav a:hover { opacity: .55; }
+.nav-cta { border: 1px solid rgba(32,33,30,.4); padding: .8rem 1.05rem; border-radius: 2rem; }
+.nav-cta span { color: var(--rust); margin-left: .45rem; }
+.menu-toggle { display: none; background: none; border: 0; font: .73rem var(--sans); }
+.hero { min-height: 100vh; position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 11rem; }
+.eyebrow { font: .65rem var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); display: flex; align-items: center; gap: .65rem; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rust); display: inline-block; }
+h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: -.055em; line-height: .93; margin: 1.7rem 0; }
+h1 { font-size: clamp(4rem, 8.4vw, 8.6rem); }
+h1 em, h2 em { font-style: italic; color: var(--rust); }
+.hero-intro { font-size: .92rem; line-height: 1.7; max-width: 22rem; color: #5c5b55; margin: 2rem 0 2.2rem; }
+.text-link { font-size: .72rem; border-bottom: 1px solid currentColor; padding-bottom: .55rem; display: inline-flex; gap: 1.2rem; transition: gap .3s; }
+.text-link:hover { gap: 2rem; }
+.text-link span { color: var(--rust); }
+.hero-visual { height: 33rem; position: relative; overflow: hidden; background: #c7bdb0; transform: translateY(1rem); padding: 3rem 2.5rem; }
+.browser-preview { height: 100%; background: #f3f0e9; box-shadow: 1.2rem 1.2rem 0 rgba(32,33,30,.13); }
+.browser-bar { height: 2.5rem; display: flex; align-items: center; gap: .35rem; padding: 0 1rem; border-bottom: 1px solid #d7d0c4; color: var(--muted); }
+.browser-bar span { width: .42rem; height: .42rem; border-radius: 50%; background: var(--rust); }
+.browser-bar span:nth-child(2) { background: #b7a988; }
+.browser-bar span:nth-child(3) { background: #92978b; }
+.browser-bar small { margin-left: auto; font: .55rem var(--mono); }
+.browser-content { height: calc(100% - 2.5rem); padding: 3rem 2rem; background: linear-gradient(135deg, #f3f0e9 40%, #d6cfc3 40%); }
+.browser-content i { display: block; width: 2.5rem; height: .2rem; background: var(--rust); margin-bottom: 2.2rem; }
+.browser-content b { display: block; max-width: 12rem; font: 2.55rem/.95 var(--serif); font-weight: 500; letter-spacing: -.06em; }
+.browser-content em { display: inline-block; margin-top: 2rem; border-bottom: 1px solid var(--ink); padding-bottom: .4rem; font: .58rem var(--mono); font-style: normal; text-transform: uppercase; }
+.visual-note { font: .6rem var(--mono); text-transform: uppercase; position: absolute; }
+.note-top { right: 1.5rem; top: 1.5rem; }
+.note-bottom { bottom: 1.5rem; left: 1.5rem; }
+.vertical-word { position: absolute; right: 1.3rem; bottom: 3.5rem; writing-mode: vertical-rl; font: .62rem var(--mono); letter-spacing: .22em; }
+.hero-foot { position: absolute; bottom: 2rem; left: 8vw; right: 8vw; display: flex; gap: 1.2rem; align-items: center; font: .6rem var(--mono); text-transform: uppercase; color: var(--muted); }
+.hero-foot .line { height: 1px; width: 5rem; background: var(--muted); }
+.hero-foot span:last-child { margin-left: auto; }
+.projects { background: var(--ink); color: var(--paper); }
+.section-heading { display: grid; grid-template-columns: 1fr 1.15fr 1fr; align-items: end; gap: 2rem; margin-bottom: 5rem; }
+.section-heading .eyebrow { align-self: start; color: #85857c; }
+h2 { font-size: clamp(3.4rem, 6.5vw, 6.7rem); }
+.heading-aside { color: #99988f; line-height: 1.65; font-size: .82rem; max-width: 16rem; margin-bottom: .7rem; }
+.project-list { display: grid; grid-template-columns: 1fr 1fr; gap: 5.3vw; }
+.project-image { aspect-ratio: 16 / 10; position: relative; overflow: hidden; }
+.project-josephine .project-image { background: #d0c8bb url("josephine-desktop.png") left top / 100% 100% no-repeat; }
+.project-napoleon .project-image { background: #a44632 url("hotel-napoleon-desktop.png") left top / 100% 100% no-repeat; }
+.image-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(0,0,0,.14), transparent 45%, rgba(0,0,0,.22)); }
+.project-label { display: none; }
+.project-visual { position: absolute; inset: 0; background: transparent; }
+.project-visual > * { display: none; }
+.josephine-visual:before, .josephine-visual:after { display: none; }
+.round-arrow { position: absolute; z-index: 2; right: 1.2rem; bottom: 1.2rem; display: grid; place-items: center; width: 3.3rem; height: 3.3rem; background: var(--lime); color: var(--ink); border-radius: 50%; font-size: 1.3rem; transition: transform .3s; }
+.round-arrow:hover { transform: rotate(45deg); }
+.project-meta { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 1rem; align-items: start; padding-top: 1.3rem; border-bottom: 1px solid #44463e; padding-bottom: 1.2rem; }
+.project-meta h3 { margin: 0 0 .45rem; font: 1.65rem var(--serif); }
+.project-meta p { margin: 0; font-size: .66rem; color: #9a9990; line-height: 1.5; }
+.project-type { align-self: center; }
+.project-year { font: .61rem var(--mono); color: #9a9990; }
+.manifesto { display: grid; grid-template-columns: 1fr 1.7fr 1fr; gap: 3rem; align-items: start; }
+.manifesto-mark { font-size: 5rem; line-height: .7; color: var(--rust); transform: rotate(15deg); }
+.manifesto-content h2 { font-size: clamp(3rem, 6vw, 6.2rem); margin-top: 2.5rem; }
+.manifesto-content > p:not(.eyebrow) { max-width: 22rem; line-height: 1.75; color: #67665f; font-size: .85rem; margin: 2rem 0; }
+.manifesto-side { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem .6rem; padding-top: 2.3rem; font-size: .72rem; border-top: 1px solid var(--ink); }
+.manifesto-side span { font: .6rem var(--mono); color: var(--rust); }
+.manifesto-side p { margin: 0; }
+.services { background: var(--warm); display: grid; grid-template-columns: .7fr 1.3fr; gap: 8vw; }
+.services-title h2 { font-size: clamp(3.4rem, 6vw, 6rem); }
+.service-item { position: relative; border-top: 1px solid rgba(32,33,30,.45); padding: 1.25rem 2rem 1.35rem 0; display: grid; grid-template-columns: 2.5rem 1fr 1.1fr; gap: 1rem; align-items: start; }
+.service-item > span:first-child { color: var(--rust); font: .62rem var(--mono); }
+.service-item h3 { margin: 0; font: 1.35rem var(--serif); }
+.service-item p { margin: 0; font-size: .75rem; line-height: 1.6; color: #68675f; max-width: 13rem; }
+.service-arrow { position: absolute; right: 0; top: 1.3rem; color: var(--rust); }
+.contact { min-height: 85vh; background: var(--rust); color: #f1e8d8; display: flex; flex-direction: column; }
+.contact .eyebrow, .contact-top > span { color: #edb2a1; }
+.contact-top { display: flex; justify-content: space-between; font: .62rem var(--mono); text-transform: uppercase; }
+.contact h2 { font-size: clamp(4rem, 9.5vw, 10rem); margin: auto 0 3.5rem; }
+.contact h2 em { color: var(--lime); }
+.contact-email { font: 1.2rem var(--serif); border-bottom: 1px solid rgba(241,232,216,.55); padding-bottom: 1.1rem; display: flex; justify-content: space-between; max-width: 35rem; }
+.contact-email span { color: var(--lime); }
+.contact-bottom { display: flex; justify-content: space-between; font: .6rem var(--mono); text-transform: uppercase; margin-top: 5rem; color: #edb2a1; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay { transition-delay: .16s; }
+.reveal-delay-more { transition-delay: .3s; }
+.cursor-glow { position: fixed; z-index: 10; pointer-events: none; width: 22rem; height: 22rem; border-radius: 50%; background: rgba(215,237,117,.12); filter: blur(50px); transform: translate(-50%, -50%); left: -30rem; top: -30rem; transition: left .5s ease-out, top .5s ease-out; }
+@media (max-width: 800px) {
+  .section-pad { padding: 5rem 7vw; }
+  .site-header { padding: 1.4rem 7vw; }
+  .menu-toggle { display: flex; align-items: center; gap: .6rem; z-index: 6; }
+  .menu-toggle i { width: 1rem; height: 1px; background: var(--ink); display: block; }
+  .main-nav { position: fixed; inset: 0; background: var(--paper); flex-direction: column; justify-content: center; font: 2rem var(--serif); gap: 1.8rem; transform: translateX(100%); transition: transform .4s; }
+  .main-nav.open { transform: translateX(0); }
+  .nav-cta { font: .8rem var(--sans); }
+  .hero { min-height: auto; display: block; padding-top: 10rem; padding-bottom: 7rem; }
+  .hero-visual { height: 24rem; margin-top: 5rem; }
+  .hero-foot { left: 7vw; right: 7vw; bottom: 1.6rem; }
+  .section-heading, .manifesto, .services { display: block; }
+  .section-heading .heading-aside { margin-top: 2rem; }
+  .project-list { display: block; }
+  .project-card + .project-card { margin-top: 4rem; }
+  .project-image { aspect-ratio: 4 / 3; }
+  .project-josephine .project-image { background-image: url("https://josephine-cherbourg.fr/opengraph-image?2d2a7427485b7209"); background-position: center; background-size: cover; }
+  .project-napoleon .project-image { background-image: url("https://hotel-napoleon.fr/img/accueil.webp"); background-position: center; background-size: cover; }
+  .project-meta { grid-template-columns: 1fr auto; }
+  .project-type { display: none; }
+  .manifesto-side { margin-top: 4rem; }
+  .services-title { margin-bottom: 4rem; }
+  .service-item { grid-template-columns: 2rem 1fr; }
+  .service-item p { grid-column: 2; }
+  .contact { min-height: 80vh; }
+  .contact h2 { margin-top: 8rem; margin-bottom: 3rem; }
+  .contact-bottom { flex-wrap: wrap; gap: 1rem; margin-top: 4rem; }
+}
